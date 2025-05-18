@@ -1,0 +1,62 @@
+{
+  "type": "module",
+  "name": "prismaui-example-ui",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently \"vite\" \"tsc --watch --noEmit\"",
+    "build": "vite build",
+    "build:dev": "vite build --mode=development",
+    "start": "vite preview",
+    "typecheck": "tsc",
+    "format": "prettier --write . --cache",
+    "lint": "eslint . --fix --quiet",
+    "prepare": "husky"
+  },
+  "author": "StarkMP",
+  "devDependencies": {
+    "@eslint/js": "9.25.1",
+    "@tailwindcss/vite": "4.1.4",
+    "@types/node": "22.15.2",
+    "@types/react": "19.1.2",
+    "@types/react-dom": "19.1.2",
+    "@types/throttle-debounce": "5.0.2",
+    "@vitejs/plugin-react": "4.4.1",
+    "autoprefixer": "10.4.21",
+    "clsx": "2.1.1",
+    "concurrently": "9.1.2",
+    "eslint": "9.25.1",
+    "eslint-config-prettier": "10.1.2",
+    "eslint-plugin-jsx-a11y": "6.10.2",
+    "eslint-plugin-prettier": "5.2.6",
+    "eslint-plugin-react": "7.37.5",
+    "eslint-plugin-react-hooks": "5.2.0",
+    "eslint-plugin-simple-import-sort": "12.1.1",
+    "eslint-plugin-unicorn": "58.0.0",
+    "globals": "16.0.0",
+    "husky": "9.1.7",
+    "lint-staged": "15.5.1",
+    "postcss": "8.5.3",
+    "prettier": "3.5.3",
+    "tailwind-merge": "3.2.0",
+    "tailwindcss": "3.4.17",
+    "typescript": "5.8.3",
+    "typescript-eslint": "8.31.0",
+    "vite": "6.3.3",
+    "vite-plugin-svgr": "4.3.0"
+  },
+  "baseUrl": "",
+  "browserslist": [
+    "> 1%",
+    "last 4 versions",
+    "Firefox ESR",
+    "not ie < 9"
+  ],
+  "dependencies": {
+    "motion": "12.9.2",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-router-dom": "7.5.2",
+    "throttle-debounce": "5.0.2",
+    "zustand": "5.0.3"
+  }
+}
