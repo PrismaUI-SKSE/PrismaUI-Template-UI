@@ -1,3 +1,4 @@
+import { AnimatePresence } from 'motion/react';
 import { Outlet } from 'react-router';
 
 import { DevTools } from '@/components/dev-tools';
@@ -10,9 +11,7 @@ export const Root = () => {
   return (
     <>
       {visibility.hud ? <HUD /> : null}
-
-      {/* For Dev Mode only (Browser only) */}
-      {import.meta.env.DEV ? <DevTools /> : null}
+      <AnimatePresence>{visibility.devtools ? <DevTools /> : null}</AnimatePresence>
 
       <Outlet />
     </>

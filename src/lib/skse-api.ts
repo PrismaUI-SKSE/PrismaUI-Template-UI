@@ -1,3 +1,5 @@
+import { useDevToolsStore } from '@/stores';
+
 const listeners: { eventName: string; callback: (...args: any[]) => any }[] = [];
 
 export const SKSE_API = {
@@ -9,6 +11,14 @@ export const SKSE_API = {
         for (const listener of filtered) {
           listener.callback(...args);
         }
+
+        useDevToolsStore.getState().addToHistory({
+          type: 'invoke',
+          name: eventName,
+          data: args.toString(),
+          listeners: filtered.length,
+          creationDate: Date.now(),
+        });
       },
     };
   },
@@ -29,7 +39,18 @@ export const SKSE_API = {
     listeners.splice(index, 1);
   },
   sendToSKSE: (fnName: string, data?: string) => {
-    // @ts-ignore
-    window[fnName](data);
+    try {
+      // @ts-ignore
+      window[fnName](data);
+    } catch {
+      /* empty */
+    }
+
+    useDevToolsStore.getState().addToHistory({
+      type: 'send_to_skse',
+      name: fnName,
+      data,
+      creationDate: Date.now(),
+    });
   },
 };

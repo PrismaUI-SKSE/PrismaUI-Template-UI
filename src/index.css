@@ -27,3 +27,13 @@
     align-items: center;
   }
 }
+
+/* @layer base {
+  @font-face {
+    font-family: 'SourceCodePro';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(./assets/fonts/SourceCodePro-Regular.ttf) format('truetype');
+  }
+} */

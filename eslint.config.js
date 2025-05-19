@@ -90,7 +90,7 @@ export default [
       'react/jsx-curly-brace-presence': 'warn',
       'react/no-typos': 'warn',
       'react/self-closing-comp': 'warn',
-      'react/jsx-sort-props': 'warn',
+      'react/jsx-sort-props': 'off',
       'react/react-in-jsx-scope': 'off',
       'react/jsx-one-expression-per-line': 'off',
 
