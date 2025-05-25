@@ -20,7 +20,7 @@ npm install
 npm run build
 ```
 
-> Then you will see `dist` folder in the root directory. It contains your UI filex includes `index.html`. Now, you can use it in your PrismaUI plugin as view.
+> Then you will see `dist` folder in the root directory. It contains your UI files includes `index.html` which you can use in your PrismaUI plugin as view.
 
 ### Development in a browser
 
@@ -38,6 +38,8 @@ npm run dev
 - [React Router](https://reactrouter.com/) - Routing library for React to make separate pages (frames) for our user interface.
 - [Motion](https://motion.dev/) - Animations library to make and control animations simply and fast with React.
 - And other tools like [Vite](https://vite.dev/), [Eslint](https://eslint.org/), [Prettier](https://prettier.io/), [Husky](https://typicode.github.io/husky/).
+
+### 
 
 ## Contributing
 
