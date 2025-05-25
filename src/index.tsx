@@ -4,7 +4,7 @@ import { createRoot } from 'react-dom/client';
 
 import { App } from '@/app';
 import { SKSE_API } from '@/lib/skse-api';
-import { initSubscribers } from '@/subscribers';
+import { initSubscribers } from '@/lib/subscribers';
 
 SKSE_API.init();
 initSubscribers();

@@ -12,10 +12,26 @@ export const SKSE_API = {
           listener.callback(...args);
         }
 
+        let argsData;
+
+        try {
+          argsData = args
+            .map((arg) => {
+              if (typeof arg === 'object' && arg !== null) {
+                return JSON.stringify(arg);
+              }
+
+              return String(arg);
+            })
+            .join(', ');
+        } catch {
+          argsData = args.toString();
+        }
+
         useDevToolsStore.getState().addToHistory({
           type: 'invoke',
           name: eventName,
-          data: args.toString(),
+          data: argsData,
           listeners: filtered.length,
           creationDate: Date.now(),
         });

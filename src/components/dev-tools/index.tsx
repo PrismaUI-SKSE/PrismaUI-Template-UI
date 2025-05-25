@@ -13,11 +13,15 @@ export const DevTools = () => {
   const historyAreaRef = useRef<HTMLDivElement | null>(null);
 
   const invoke = () => {
-    const { name, data } = invokeData;
+    const { name, data: args } = invokeData;
 
-    if (!name || !data) return;
+    if (!name) return;
 
-    eval(`window.SKSE_API.call('${name}', ${data});`);
+    if (args) {
+      eval(`window.SKSE_API.call('${name}', ${args});`);
+    } else {
+      eval(`window.SKSE_API.call('${name}');`);
+    }
   };
 
   const sendToSKSE = () => {
@@ -110,11 +114,13 @@ export const DevTools = () => {
           <div className="w-full h-full border border-slate-600 text-white relative">
             <div
               ref={historyAreaRef}
-              className="absolute left-0 top-0 size-full p-1 overflow-y-auto gap-y-[2px] flex flex-col"
+              className="absolute scroll-smooth left-0 top-0 size-full p-1 overflow-y-auto overflow-x-hidden gap-y-[2px] flex flex-col"
             >
               {history.map((event, index) => (
-                <div
-                  className="flex flex-wrap gap-1 p-1 bg-black/50 hover:bg-slate-800"
+                <motion.div
+                  initial={{ backgroundColor: 'rgb(255 255 255 / 0.25)' }}
+                  animate={{ backgroundColor: 'rgb(0 0 0 / 0.5)' }}
+                  className="flex flex-wrap gap-1 p-1  hover:!bg-slate-800"
                   key={index}
                 >
                   <span>{format(event.creationDate, 'HH:mm:ss')}</span>
@@ -147,7 +153,7 @@ export const DevTools = () => {
                       {event.data}
                     </span>
                   ) : null}
-                </div>
+                </motion.div>
               ))}
               {history.length === 0 ? (
                 <span className="absolute-center text-center text-gray-400">No data</span>

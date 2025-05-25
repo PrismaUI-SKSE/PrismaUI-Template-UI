@@ -7,11 +7,9 @@ import { useDevToolsStore } from './stores';
 
 export const App = () => {
   useEffect(() => {
-    setTimeout(() => {
-      const texturePreloader = document.querySelector('#texture-preloader') as HTMLElement;
-
-      texturePreloader.style.display = 'none';
-    }, 100);
+    if (import.meta.env.DEV) {
+      document.body.classList.add('bg-background', 'bg-no-repeat', 'bg-cover', 'bg-center');
+    }
 
     const onError = (e: ErrorEvent) => {
       useDevToolsStore.getState().addToHistory({
