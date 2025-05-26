@@ -15,6 +15,9 @@ export default ({ mode }: { mode: string }): UserConfigExport => {
         '@': path.resolve(__dirname, './src'),
       },
     },
+    server: {
+      open: true,
+    },
     build: {
       rollupOptions: {
         output: {
