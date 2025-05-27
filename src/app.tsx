@@ -1,13 +1,16 @@
+import { AnimatePresence } from 'motion/react';
 import { useEffect } from 'react';
-import { RouterProvider } from 'react-router-dom';
 
 import browserBackground from '@/assets/images/browser-background.png';
-import { router } from '@/routes';
+import { DevTools } from '@/components/dev-tools';
+import { HUD } from '@/components/hud';
+import { Preview } from '@/components/preview';
+import { useAppStore } from '@/stores/app';
 import { useDevToolsStore } from '@/stores/dev-tools';
 
-import { useAppStore } from './stores/app';
-
 export const App = () => {
+  const { visibility } = useAppStore();
+
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'F4') {
@@ -44,5 +47,14 @@ export const App = () => {
     };
   }, []);
 
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      {import.meta.env.DEV ? <Preview /> : null}
+
+      <AnimatePresence>
+        {visibility.hud ? <HUD /> : null}
+        {visibility.devtools ? <DevTools /> : null}
+      </AnimatePresence>
+    </>
+  );
 };

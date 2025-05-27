@@ -5,6 +5,7 @@ This repository contains an example user interface built using PrismaUI, demonst
 ## Getting Started
 
 ### Requirements
+
 - [Node.js v.20 or higher](https://nodejs.org/)
 - Mostly recommended to use [Visual Studio Code](https://code.visualstudio.com/) or equivalent IDE
 
@@ -31,15 +32,15 @@ npm run dev
 ## Documentation
 
 ### Technologies
+
 - [TypeScript](https://www.typescriptlang.org/) - language with static typing instead of JavaScript.
 - [React](https://react.dev/) - main framework to build core of our UI.
 - [TailwindCSS 3](https://v3.tailwindcss.com/) - CSS framework to make styles simply and fast with classnames directly inside your html markup.
 - [Zustand](https://zustand-demo.pmnd.rs/) - State-management library to control our UI state model data.
-- [React Router](https://reactrouter.com/) - Routing library for React to make separate pages (frames) for our user interface.
 - [Motion](https://motion.dev/) - Animations library to make and control animations simply and fast with React.
 - And other tools like [Vite](https://vite.dev/), [Eslint](https://eslint.org/), [Prettier](https://prettier.io/), [Husky](https://typicode.github.io/husky/).
 
-### 
+###
 
 ## Contributing
 
