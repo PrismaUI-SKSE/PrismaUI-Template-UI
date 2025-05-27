@@ -1,6 +1,6 @@
 # PrismaUI Template UI
 
-This repository contains an example user interface built using PrismaUI, demonstrating how to implement and use various UI components and features.
+This repository contains an example user interface built using [Prisma UI](https://github.com/PrismaUI-SKSE), demonstrating how to implement and use various UI components and features.
 
 ## Getting Started
 
