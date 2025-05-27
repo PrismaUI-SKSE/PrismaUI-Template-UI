@@ -5,7 +5,7 @@ This repository contains an example user interface built using PrismaUI, demonst
 ## Getting Started
 
 ### Requirements
-- [Node.js v.20 and higher](https://nodejs.org/)
+- [Node.js v.20 or higher](https://nodejs.org/)
 - Mostly recommended to use [Visual Studio Code](https://code.visualstudio.com/) or equivalent IDE
 
 ### Install dependencies
