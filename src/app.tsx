@@ -1,15 +1,25 @@
 import { useEffect } from 'react';
 import { RouterProvider } from 'react-router-dom';
 
+import browserBackground from '@/assets/images/browser-background.png';
 import { router } from '@/routes';
 import { useDevToolsStore } from '@/stores/dev-tools';
 
+import { useAppStore } from './stores/app';
+
 export const App = () => {
   useEffect(() => {
-    const onKeyDown = () => {};
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'F4') {
+        const appStore = useAppStore.getState();
+
+        appStore.setVisibility('devtools', !appStore.visibility.devtools);
+      }
+    };
 
     if (import.meta.env.DEV) {
-      document.body.classList.add('bg-background', 'bg-no-repeat', 'bg-cover', 'bg-center');
+      document.body.classList.add('bg-no-repeat', 'bg-cover', 'bg-center');
+      document.body.style.backgroundImage = `url("${browserBackground}")`;
 
       window.addEventListener('keydown', onKeyDown);
     }
