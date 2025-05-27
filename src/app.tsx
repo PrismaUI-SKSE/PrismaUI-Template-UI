@@ -51,10 +51,8 @@ export const App = () => {
     <>
       {import.meta.env.DEV ? <Preview /> : null}
 
-      <AnimatePresence>
-        {visibility.hud ? <HUD /> : null}
-        {visibility.devtools ? <DevTools /> : null}
-      </AnimatePresence>
+      {visibility.hud ? <HUD /> : null}
+      <AnimatePresence>{visibility.devtools ? <DevTools /> : null}</AnimatePresence>
     </>
   );
 };
