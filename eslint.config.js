@@ -93,6 +93,7 @@ export default [
       'react/jsx-sort-props': 'off',
       'react/react-in-jsx-scope': 'off',
       'react/jsx-one-expression-per-line': 'off',
+      'react/no-unescaped-entities': 'warn',
 
       'jsx-a11y/click-events-have-key-events': 'off',
       'jsx-a11y/no-static-element-interactions': 'off',

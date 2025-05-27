@@ -14,6 +14,7 @@ export const Root = () => {
       {import.meta.env.DEV ? <Preview /> : null}
 
       {visibility.hud ? <HUD /> : null}
+
       <AnimatePresence>{visibility.devtools ? <DevTools /> : null}</AnimatePresence>
 
       <Outlet />
