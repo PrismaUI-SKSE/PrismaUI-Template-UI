@@ -1,24 +1,5 @@
 import { create } from 'zustand';
 
-/* --------- App Store --------- */
-export type AppStore = {
-  visibility: {
-    hud: boolean;
-    devtools: boolean;
-  };
-  setVisibility: (component: keyof AppStore['visibility'], visibility: boolean) => void;
-};
-
-export const useAppStore = create<AppStore>((set) => ({
-  visibility: {
-    hud: false,
-    devtools: false,
-  },
-  setVisibility: (component, visibility) =>
-    set((state) => ({ visibility: { ...state.visibility, [component]: visibility } })),
-}));
-
-/* --------- DevTools Store --------- */
 export type DevToolsEvent =
   | {
       type: 'invoke';

@@ -1,4 +1,4 @@
-import { useDevToolsStore } from '@/stores';
+import { useDevToolsStore } from '@/stores/dev-tools';
 
 const listeners: { eventName: string; callback: (...args: any[]) => any }[] = [];
 

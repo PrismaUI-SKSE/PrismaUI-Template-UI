@@ -1,5 +1,5 @@
 import { SKSE_API } from '@/lib/skse-api';
-import { useAppStore } from '@/stores';
+import { useAppStore } from '@/stores/app';
 
 export const initSubscribers = () => {
   // Show/Hide DevTools

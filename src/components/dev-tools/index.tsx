@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import { useEffect, useRef, useState } from 'react';
 
 import { SKSE_API } from '@/lib/skse-api';
-import { useDevToolsStore } from '@/stores';
+import { useDevToolsStore } from '@/stores/dev-tools';
 import { cn } from '@/utils/styles';
 
 export const DevTools = () => {

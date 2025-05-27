@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 * {
-  user-select: none;
+  /* You can uncomment the next line to remove the text selection */
+  /* user-select: none; */
 }
 
 #app {
