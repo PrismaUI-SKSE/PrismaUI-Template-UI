@@ -97,6 +97,7 @@ export default [
 
       'jsx-a11y/click-events-have-key-events': 'off',
       'jsx-a11y/no-static-element-interactions': 'off',
+      'jsx-a11y/mouse-events-have-key-events': 'off',
 
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/prefer-destructuring': 'off',
